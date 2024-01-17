@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="a">A</label>
+      <input id="a" type="text" />
+      <label for="b">B</label>
+      <input id="b" type="text" />
+      <button>click</button>
+      <div></div>
+    </form>
+
+    <script>
+      let inputA = document.querySelector("#a");
+      let inputB = document.querySelector("#b");
+      let button = document.querySelector("button");
+      let div = document.querySelector("div");
+      button.addEventListener("click", function (e) {
+        e.preventDefault(); //prevent reloading the page
+        div.innerHTML = `${a.value} + ${b.value}`;
+      });
+    </script>
+  </body>
+</html>

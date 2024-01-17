@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      debugger;
+      for (let i = 0; i < 10; ) {
+        let userPickNum = prompt("please pick a number (from 1-100)");
+        let answer = 27;
+
+        userPickNum = userPickNum / 1;
+        console.log(typeof userPickNum);
+
+        if (userPickNum == answer) {
+          alert("just right");
+          break;
+        } else if (
+          userPickNum == null ||
+          userPickNum == "" ||
+          userPickNum === NaN
+        ) {
+          alert("they did not enter a number");
+        } else if (userPickNum > answer) {
+          alert("too big");
+          i++;
+        } else if (userPickNum < answer) {
+          alert("too small");
+          i++;
+        } else {
+          alert("they did not enter a number");
+        }
+      }
+    </script>
+  </body>
+</html>

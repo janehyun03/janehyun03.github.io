@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="todo">
+      <p>To Do</p>
+    </div>
+    <div class="add-container">
+      <!-- 버튼 누르면 안의 요소 나오기 추가하기 -->
+      <div class="add">
+        <form>
+          <input type="text" class="add-text" placeholder="add list" />
+          <select class="add-category">
+            <option>WORK</option>
+            <option>PERSONAL</option>
+          </select>
+
+          <button class="submit" submit="submit">send</button>
+        </form>
+      </div>
+      <br />
+      <b>WORK</b>
+      <div class="work"></div>
+      <b>PERSONAL</b>
+      <div class="personal"></div>
+      <div class="show-list"></div>
+      <button class="done" style="display: none">done</button>
+      <!-- 해야할 일 보이도록  -->
+    </div>
+
+    <script>
+      let editButton = document.querySelector(".done");
+      let addTodo = document.querySelector(".show-list");
+      let addWork = document.querySelector(".work");
+      let addPersonal = document.querySelector(".personal");
+      let addText = document.querySelector(".add-text");
+      let category = document.querySelector(".add-category");
+      let submit = document.querySelector(".submit");
+      let arrWork = [];
+      let arrPersonal = [];
+      let todoVal = document.querySelector(".todo-val");
+      let getTime = new Date().toLocaleDateString();
+
+      submit.addEventListener("click", (e) => {
+        let addList = `
+        <div class="list">
+      <input type="checkbox" class="checkbox" name="list" onchange="change()"/>
+      <span class="todo-val">${addText.value}</span><span class="time">${getTime}</span><span class="category"> ${category.value}</span><div><br>
+      `;
+        e.preventDefault();
+
+        if (category.value == "WORK") {
+          // arrWork.push([addText.value, getTime, category.value]);
+          addWork.insertAdjacentHTML("beforeend", addList);
+        } else if (category.value == "PERSONAL") {
+          // arrPersonal.push([addText.value, getTime, category.value]);
+          addPersonal.insertAdjacentHTML("beforeend", addList);
+        }
+      });
+      function change() {
+        let checkbox = document.querySelectorAll(".checkbox");
+        checkbox = Array.from(checkbox);
+
+        let list = document.querySelectorAll(".list");
+        list = Array.from(list);
+
+        for (let i = 0; i < checkbox.length; i++) {
+          if (checkbox[i].checked == true) {
+            list[i].remove();
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

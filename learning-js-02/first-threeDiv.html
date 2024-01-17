@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+      .square {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        text-align: center;
+        background: none;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="square1" class="square">square1 = red</div>
+      <div id="square2" class="square">square2 = blue</div>
+      <div id="square3" class="square">square3 = yellow</div>
+    </div>
+    <div class="button-container">
+      <button>button</button>
+    </div>
+    <script>
+      let square1 = document.querySelector("#square1");
+      let square2 = document.querySelector("#square2");
+      let square3 = document.querySelector("#square3");
+      let square = document.querySelectorAll(".square");
+      let button = document.querySelector("button");
+      let squareArray = [];
+      let buttonClicked = 0;
+
+      function changeColor() {
+        // switch(buttonClicked){
+        //   case :  buttonClicked = 0;
+        // }
+
+        square = Array.from(square);
+        // console.log(square);
+        for (let i = 0; i < square.length; i++) {
+          if (square[i].style.background == "") {
+            // map을 돌릴 수도 있나??
+            // switch문을 써도 됨
+            // buttonClicked += 1;
+            square1.style.background = "red";
+            square2.style.background = "blue";
+            square3.style.background = "yellow";
+            console.log(square[i].style.background);
+          } else {
+            square1.style.background == "yellow";
+            square2.style.background == "red";
+            square3.style.background == "blue";
+          }
+        }
+      }
+
+      button.addEventListener("click", changeColor);
+      console.log(squareArray);
+      // console.log(buttonClicked);
+      // 클릭 횟수를 세는 방법
+      // 스타일을 보는 방법
+    </script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .div {
+        border: 2px black solid;
+        height: 50px;
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+      #div-content {
+        border: 2px black solid;
+        text-align: center;
+        height: 100px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>DOM stands for Document Object Model</h1>
+
+    <button onclick="myClickEvent()">button #1</button>
+    <button id="btn2">button #2</button>
+    <button id="btn3">button #3</button>
+    <button id="btn4">button #4</button>
+    <button id="btn5">button #5</button> -->
+
+    <div class="container">
+      <div id="div1" class="div">div1</div>
+      <div id="div2" class="div">div2</div>
+      <div id="div3" class="div">div3</div>
+      <div id="div4" class="div">div4</div>
+    </div>
+    <div id="div-content">div-content</div>
+
+    <!-- assignmet 
+
+  insert 4 divs 
+  read div tab content 1
+  read div tab content 2
+  read div tab content 3
+  read div tab content 4
+  each div will toggle with which div you want to see
+
+-->
+    <script>
+      let div1 = document.querySelector("#div1");
+      let div2 = document.querySelector("#div2");
+      let div3 = document.querySelector("#div3");
+      let div4 = document.querySelector("#div4");
+      let div5 = document.querySelector("#div-content");
+
+      div1.addEventListener("click", () => {
+        showDiv(1);
+      });
+      div2.addEventListener("click", () => {
+        showDiv(2);
+      });
+      div3.addEventListener("click", () => {
+        showDiv(3);
+      });
+      div4.addEventListener("click", () => {
+        showDiv(4);
+      });
+
+      function showDiv(divNum) {
+        div5.textContent = `read div tab content ${divNum}`;
+      }
+
+      // function showDiv1() {
+      //   div5.textContent = `read div tab content 1`;
+      // }
+
+      // function showDiv2() {
+      //   div5.textContent = `read div tab content 2`;
+      // }
+
+      // function showDiv3() {
+      //   div5.textContent = `read div tab content 3`;
+      // }
+      // function showDiv4() {
+      //   div5.textContent = `read div tab content 4`;
+      // }
+
+      // let btn2 = document.querySelector("#btn2");
+      // let btn3 = document.querySelector("#btn3");
+      // let btn4 = document.querySelector("#btn4");
+      // let btn5 = document.querySelector("#btn5");
+
+      // function makeDiv(e) {
+      //   const newDiv = document.createElement("div");
+      //   document.body.appendChild(newDiv);
+      //   newDiv.textContent = "hi";
+      //   if (newDiv.style.display !== "none") {
+      //     newDiv.style.display = "none";
+      //   } else newDiv.style.display = "block";
+      // }
+
+      // btn5.addEventListener("click", makeDiv);
+
+      // function myClickEvent(e) {
+      //   console.log(event);
+      //   alert("I have been clikced!");
+      // }
+      // btn2.addEventListener("click", function () {
+      //   alert("this is button 2");
+      // });
+
+      // btn2.addEventListener("click", myClickEvent);
+
+      // btn3.onclick = function () {
+      //   alert("this is button 3");
+      // };
+
+      // setAttribute(name, value)
+      // btn4.setAttribute("onclick", function () {
+      //   alert("this is button4");
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      .company {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p style="color: red" id="errorMessage"></p>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="name" />
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="email" />
+
+        <label for="pnumber">Phone Number</label>
+        <input
+          type="text"
+          id="pnumber"
+          name="pnumber"
+          placeholder="Phone Number"
+        />
+        <div class="radio">
+          <input
+            type="radio"
+            id="home"
+            name="category"
+            placeholder="home"
+            value="home"
+            onclick="hideCompany()"
+          />
+          <label for="home">Home</label>
+          <input
+            type="radio"
+            id="business"
+            value="business"
+            name="category"
+            placeholder="business"
+            onclick="showCompany()"
+          />
+          <label for="business">Business</label>
+          <div class="company">
+            <label for="companyname">Company Name</label>
+            <input type="text" id="companyname" placeholder="Company Name" />
+          </div>
+        </div>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
+
+        <input type="submit" id="submit" />
+      </form>
+    </div>
+
+    <script>
+      let company = document.querySelector(".company");
+      let contactForm = document.querySelector("form");
+      let errorMessage = document.getElementById("errorMessage");
+      function showCompany() {
+        company.style.visibility = "visible";
+      }
+      function hideCompany() {
+        company.style.visibility = "hidden";
+      }
+
+      // contactForm = Array.from(contactForm);
+      // for (let i = 0; i < contactForm.length; i++) {
+      //   console.log(contactForm[i]);
+      // }
+      // <p>에러메시지 한줄만 입력시키기</p>
+      contactForm.addEventListener("submit", saveContact);
+      function saveContact(event) {
+        event.preventDefault();
+        console.log(contactForm);
+        if (contactForm.name.value == "") {
+          return (errorMessage.innerHTML = "name is missing");
+        }
+
+        if (contactForm.email.value == "") {
+          return (errorMessage.innerHTML = " email is missing");
+        }
+        if (
+          !(
+            contactForm.email.value.includes("@") &&
+            contactForm.email.value.includes(".com")
+          )
+        ) {
+          return (errorMessage.innerHTML =
+            "the format is incorrect, please put @ or .com");
+        }
+
+        if (contactForm.pnumber.value == "") {
+          return (errorMessage.innerHTML = "your phone number is missing");
+        }
+        if (contactForm.pnumber.value.length < 10) {
+          return (errorMessage.innerHTML = "your phone number is less than 10");
+        }
+
+        if (contactForm.category.value == "") {
+          return (errorMessage.innerHTML = "home or business?");
+        }
+        if (
+          contactForm.category.value == "business" &&
+          contactForm.companyname.value == ""
+        ) {
+          return (errorMessage.innerHTML = "your company name is missing");
+        }
+        if (contactForm.subject.value == "") {
+          return (errorMessage.innerHTML = "your message is missing");
+        } else {
+          errorMessage.innerHTML = "";
+          return console.log(
+            JSON.stringify({
+              name: contactForm.name.value,
+              email: contactForm.email.value,
+              "phone number": contactForm.pnumber.value,
+              category: contactForm.category.value,
+              "company name": contactForm.companyname.value,
+              message: contactForm.subject.value,
+            })
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

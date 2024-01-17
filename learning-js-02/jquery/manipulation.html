@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .selected {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>first</p>
+    <p>second</p>
+    <p>last</p>
+    <h2>h2</h2>
+    <p class="hello">hello</p>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(".hello").html("바보");
+      $("p").last().addClass("selected");
+      $(".selected").append("<p style='color:green'>Test</p>");
+      $("<p style='color:blue'>Test</p>").appendTo(".selected");
+      $("h2").appendTo($(".selected"));
+      $(".selected").after("<p>Test</p>");
+      $("p").last().attr("class", "canada");
+      $(".selected").clone().appendTo(".canada");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .squares {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        text-align: center;
+        line-height: 100px;
+        background-color: bisque;
+      }
+      .lock {
+        align-items: center;
+        height: 50px;
+        width: 200px;
+        border: 2px solid black;
+        text-align: center;
+        line-height: 50px;
+        color: gray;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- make three squares
+      make one div 
+      if you click on a square, it will say "locked" or switch over to "unlocked"
+      the div will say "locked" if any squares are "locked"
+      the div will say "unlocked" if all of the squares are "unlocked"
+     -->
+
+    <div class="container">
+      <div class="squares square1">locked</div>
+      <div class="squares square2">locked</div>
+      <div class="squares square3">locked</div>
+    </div>
+    <div class="container">
+      <button class="lock" disabled="disabled">locked</button>
+    </div>
+    <script>
+      let squares = document.querySelectorAll(".squares");
+      let lockDiv = document.querySelector(".lock");
+      // console.log(squares);
+      squares = Array.from(squares);
+      let arrLock = [];
+      squares.forEach((e, i) => {
+        let isClicked = true; //locked
+        squares[i].addEventListener("click", () => {
+          if (isClicked == true) {
+            isClicked = false;
+            squares[i].style.backgroundColor = "initial";
+            squares[i].textContent = "unlocked";
+            arrLock.push(isClicked);
+            console.log(arrLock);
+          } else if (isClicked == false) {
+            isClicked = true;
+            squares[i].style.backgroundColor = "bisque";
+            squares[i].textContent = "locked";
+            arrLock.pop(isClicked);
+            console.log(arrLock);
+          }
+          if (arrLock.length == 3) {
+            return (
+              (lockDiv.disabled = false),
+              (lockDiv.textContent = `unlocked`),
+              (lockDiv.style.color = "white")
+            );
+          } else {
+            return (
+              (lockDiv.disabled = true),
+              (lockDiv.textContent = `locked`),
+              (lockDiv.style.color = "gray")
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

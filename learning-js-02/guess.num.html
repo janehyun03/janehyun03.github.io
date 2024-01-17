@@ -1,0 +1,60 @@
+<!-- prompt your user to guess a number
+if they got it wrong, record their guess and display in the html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>This is all your guessing number</p>
+      <div class="show-number"></div>
+    </div>
+    <script>
+      const MY_NUMBER = 27;
+      let showNum = document.querySelector(".show-number");
+      let arrNum = [];
+      for (let tryNum = 0; tryNum < 10; ) {
+        let guessNum = prompt("guess the number?", "choose 1-100");
+        guessNum = guessNum / 1;
+        console.log(typeof guessNum);
+        if (guessNum == MY_NUMBER) {
+          alert("correct");
+          arrNum.push(guessNum);
+          break;
+        } else if (
+          guessNum == null ||
+          guessNum == "" ||
+          guessNum == undefined
+        ) {
+          alert("null error");
+        } else if (guessNum > MY_NUMBER) {
+          alert("your number is too big");
+          arrNum.push(guessNum);
+          tryNum++;
+        } else if (guessNum < MY_NUMBER) {
+          alert("your number is too small");
+          arrNum.push(guessNum);
+          tryNum++;
+        } else {
+          alert("error");
+        }
+      }
+      console.log(arrNum);
+      // showNum.innerHTML = arrNum;
+      showNum.textContent = arrNum;
+    </script>
+  </body>
+</html>
