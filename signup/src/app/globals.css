@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: Poppins;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/bg-intro-desktop.png");
+  background-color: hsl(0, 100%, 74%);
+  box-sizing: border-box;
+}
+
+.container {
+  min-width: 100%;
+  display: flex;
+  padding: 5vw;
+}
+
+.sentence {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 70%;
+  font-size: xx-large;
+  font-weight: 900;
+  color: white;
+}
+
+.desc {
+  width: 70%;
+  font-size: x-small;
+  color: white;
+  padding-top: 1vw;
+}
+
+.card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.first_card {
+  width: 100%;
+  font-size: x-small;
+  margin-bottom: 3vh;
+  background-color: hsl(248, 32%, 49%);
+  display: flex;
+  justify-content: center;
+}
+.second_card {
+  width: 100%;
+}
+
+form {
+  background-color: white;
+  align-items: center;
+}
+input {
+  margin-top: 3vh;
+}
+.inputError {
+  margin-top: 3vh;
+
+  background-image: url("/images/icon-error.svg");
+  background-position: 98% center;
+  background-size: 2vh;
+  background-repeat: no-repeat;
+}
+.error {
+  float: right;
+  color: red;
+  background-color: white;
+  font-size: xx-small;
+  margin-bottom: 3vh;
+}
+.condition {
+  background-color: white;
+  color: gray;
+  font-size: xx-small;
+  text-align: center;
+}
+
+.condition_term {
+  color: hsl(0, 100%, 74%);
+}
+
+button {
+  margin-top: 3vh;
+  width: 100%;
+  background-color: hsl(154, 59%, 51%);
+}
+/* 
+@media screen and (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 10vh;
+  }
+  .sentence {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 5vh;
+  }
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+  .desc {
+    width: 100%;
+    text-align: center;
+  }
+  .card {
+    width: 100%;
+  }
+  .first_card {
+    flex-direction: column;
+    align-items: center;
+  }
+} */

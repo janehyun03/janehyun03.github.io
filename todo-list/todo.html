@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./todo.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="date-todo">
+        <div class="date">
+          <div class="day"></div>
+          <div class="month-year">
+            <div class="month"></div>
+            <div class="year"></div>
+          </div>
+        </div>
+        <div class="todo">TODOLIST</div>
+      </div>
+
+      <div class="add-container">
+        <div class="add">
+          <form>
+            <input type="text" class="add-text" placeholder="add list" />
+            <button class="submit" submit="submit">send</button>
+          </form>
+        </div>
+        <br />
+
+        <div class="work"></div>
+        <div class="show-list"></div>
+      </div>
+    </div>
+
+    <script>
+      // let editButton = document.querySelector(".done");
+      let addTodo = document.querySelector(".show-list");
+      let addWork = document.querySelector(".work");
+      let addText = document.querySelector(".add-text");
+      let submit = document.querySelector(".submit");
+
+      let arrWork = [];
+      // let todoVal = document.querySelector(".todo-val");
+      let today = new Date();
+
+      let getDay = today.getDate();
+      let getMonth = today.getMonth() + 1;
+      let getYear = today.getFullYear();
+
+      document.querySelector(".day").innerHTML = getDay;
+      document.querySelector(".month").innerHTML = getMonth;
+      document.querySelector(".year").innerHTML = getYear;
+
+      submit.addEventListener("click", (e) => {
+        let addList = `
+        <div class="list">
+          <div><input type="checkbox"><span class="todo-val">${addText.value}</span></div>
+          
+          <div><span class="time">중요여부</span><span>delete</span></div>
+      `;
+        e.preventDefault();
+
+        arrWork.push([addText.value, today]);
+
+        addWork.insertAdjacentHTML("beforeend", addList);
+      });
+      // function change() {
+      //   let checkbox = document.querySelectorAll(".checkbox");
+      //   checkbox = Array.from(checkbox);
+
+      //   let list = document.querySelectorAll(".list");
+      //   list = Array.from(list);
+
+      //   for (let i = 0; i < checkbox.length; i++) {
+      //     if (checkbox[i].checked == true) {
+      //       list[i].remove();
+      //     }
+      //   }
+      // }
+    </script>
+  </body>
+</html>

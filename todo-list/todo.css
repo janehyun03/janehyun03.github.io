@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px pink solid;
+}
+
+.container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* text-align: center; */
+  padding: 5%;
+}
+
+.date-todo,
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  display: flex;
+}
+
+.day {
+  font-size: xx-large;
+}
