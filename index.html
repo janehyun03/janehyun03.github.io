@@ -9,14 +9,35 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
     />
+    <script defer src="./script.js"></script>
+
     <style></style>
     <script></script>
   </head>
   <body>
     <div class="wrap">
-      <!-- 메인 -->
-      <!-- test -->
+      <!-- main -->
       <main>
+        <!-- slide -->
+        <div class="slider">
+          <!-- <div class="img-div">image</div> -->
+
+          <!-- <div class="desc">desc</div>
+            <div class="button-container">
+              <button class="left">left</button>
+              <button class="right">right</button>
+              <button class="heart">heart</button>
+            </div>
+            <div class="list-container"></div> -->
+
+          <ul></ul>
+        </div>
+        <!-- intro -->
+        <div class="skills">
+          <div class="inner"></div>
+        </div>
+
+        <!-- skills -->
         <div class="skills">
           <div class="inner">
             <h2><span>Skills</span></h2>
@@ -24,8 +45,9 @@
               <li>
                 HTML
                 <ul>
-                  <li><span>HTML 5, XHTML Mark up</span></li>
-                  <li><span>Web Standard / Web Accessibility</span></li>
+                  <li><span>HTML5</span></li>
+                  <li><span>Web Standard</span></li>
+                  <li><span>Web Accessibility</span></li>
                 </ul>
               </li>
               <li>
@@ -56,23 +78,162 @@
                 <ul>
                   <li><span>WordPress</span></li>
                   <li><span>Webpack, Vite</span></li>
-                  <li><span></span></li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
+
+        <!-- portfolio -->
         <div class="portfolio">
           <div class="inner">
             <h2><span>Portfolio</span></h2>
             <ol class="portfolio_list">
               <li>
                 <div class="img_area">
-                  <img src="images/img_portfolio10.png" alt="" />
+                  <a href="./video/index.html" target="_blank" class="btn_goto">
+                    <img src="images/img_portfolio2.png" alt=""
+                  /></a>
                 </div>
                 <div class="portfolio_cont">
                   <h3>
                     <span class="num_portfolio">01</span>
+                    Netflix lending page
+                  </h3>
+                  <p class="summary">
+                    This is a lending page created for portfolio.<br /><br />슬라이드
+                    크기, 속도, 루프 등 옵션선택이 가능합니다.
+                  </p>
+                  <ul class="point">
+                    <li>
+                      <span>JavaScript</span>
+                      <span>CSS</span>
+                      <span>HTML</span>
+                    </li>
+                  </ul>
+                  <div class="btn_area">
+                    <a
+                      href="./video/index.html"
+                      target="_blank"
+                      class="btn_goto"
+                      >GoTo</a
+                    >
+                  </div>
+                  <table class="file_link">
+                    <thead>
+                      <tr>
+                        <th id="col1">Category</th>
+                        <th id="col2">Source (click!)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td headers="col1">
+                          <span class="category html">HTML</span>
+                        </td>
+                        <td headers="col2">
+                          <a
+                            href="https://github.com/janehyun03/janehyun03.github.io/blob/main/video/main.html"
+                            target="_blank"
+                            >main.html</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td headers="col1">
+                          <span class="category css">CSS</span>
+                        </td>
+                        <td headers="col2">
+                          <a
+                            href="https://github.com/janehyun03/janehyun03.github.io/blob/main/video/style.css"
+                            target="_blank"
+                            >style.css</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td headers="col1">
+                          <span class="category js">JS</span>
+                        </td>
+                        <td headers="col2">
+                          <a
+                            href="https://github.com/janehyun03/janehyun03.github.io/blob/main/video/script.js"
+                            target="_blank"
+                            >script.js</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="img_area">
+                  <a
+                    href="https://sign-up-page-bice.vercel.app/"
+                    target="_blank"
+                  >
+                    <img src="images/img_portfolio1.png" alt=""
+                  /></a>
+                </div>
+                <div class="portfolio_cont">
+                  <h3>
+                    <span class="num_portfolio">02</span>
+                    Sign up Form
+                  </h3>
+                  <p class="summary">
+                    This is a Sign up Form created for portfolio.
+                  </p>
+                  <ul class="point">
+                    <li>
+                      <span>Next.js</span>
+                    </li>
+                  </ul>
+                  <div class="btn_area">
+                    <a
+                      href="https://github.com/janehyun03/sign-up-page"
+                      target="_blank"
+                      class="btn_goto"
+                      >GoTo</a
+                    >
+                  </div>
+                  <table class="file_link">
+                    <thead>
+                      <tr>
+                        <th id="col1">Category</th>
+                        <th id="col2">Source (click!)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td headers="col1">
+                          <span class="category next">
+                            <img
+                              class="category svg"
+                              src="https://camo.githubusercontent.com/9e98fa0ea1973836a885b4f982165fbbc592036fcc2ad860c41c68260beb8dd2/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f6e6578746a732f6e6578746a732d6f726967696e616c2e737667"
+                            />
+                            next</span
+                          >
+                        </td>
+                        <td headers="col2">
+                          <a
+                            href="https://github.com/janehyun03/sign-up-page"
+                            target="_blank"
+                            >Github Page</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="img_area">
+                  <img src="images/img_portfolio10.png" alt="" />
+                </div>
+                <div class="portfolio_cont">
+                  <h3>
+                    <span class="num_portfolio">03</span>
                     TODO LIST
                   </h3>
                   <p class="summary">
@@ -124,13 +285,11 @@
                 </div>
                 <div class="portfolio_cont">
                   <h3>
-                    <span class="num_portfolio">02</span>
+                    <span class="num_portfolio">04</span>
                     Tic Tac Toe
                   </h3>
                   <p class="summary">
-                    리액트를 학습하며 제작한 데스크탑 페이지입니다.<br /><br />칸
-                    국제영화제에 출품한 국내 작품을 연도별로 모아볼 수 있으며,
-                    마우스 hover 시 작품 정보를 확인할 수 있습니다.
+                    리액트를 학습하며 제작한 데스크탑 페이지입니다.<br /><br />
                   </p>
                   <ul class="point">
                     <li>
@@ -155,7 +314,12 @@
                     <tbody>
                       <tr>
                         <td headers="col1">
-                          <span class="category html">React</span>
+                          <span class="category react"
+                            ><img
+                              class="category svg"
+                              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                            />React</span
+                          >
                         </td>
                         <td headers="col2">
                           <a
@@ -169,98 +333,22 @@
                   </table>
                 </div>
               </li>
-              <li>
-                <div class="img_area">
-                  <img src="images/img_portfolio8.png" alt="" />
-                </div>
-                <div class="portfolio_cont">
-                  <h3>
-                    <span class="num_portfolio">03</span>
-                    Netflix lending page
-                  </h3>
-                  <p class="summary">
-                    자바스크립트를 학습하며 제작한 슬라이더입니다.<br /><br />슬라이드
-                    크기, 속도, 루프 등 옵션선택이 가능합니다.
-                  </p>
-                  <ul class="point">
-                    <li>
-                      <span>JavaScript</span>
-                    </li>
-                  </ul>
-                  <div class="btn_area">
-                    <a
-                      href="./video/index.html"
-                      target="_blank"
-                      class="btn_goto"
-                      >GoTo</a
-                    >
-                  </div>
-                  <table class="file_link">
-                    <thead>
-                      <tr>
-                        <th id="col1">Category</th>
-                        <th id="col2">Source (click!)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td headers="col1">
-                          <span class="category html">HTML</span>
-                        </td>
-                        <td headers="col2">
-                          <a
-                            href="https://github.com/janehyun03"
-                            target="_blank"
-                            >index.html</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td headers="col1">
-                          <span class="category css">CSS</span>
-                        </td>
-                        <td headers="col2">
-                          <a
-                            href="https://github.com/janehyun03"
-                            target="_blank"
-                            >common.css</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td headers="col1">
-                          <span class="category js">JS</span>
-                        </td>
-                        <td headers="col2">
-                          <a
-                            href="https://github.com/janehyun03"
-                            target="_blank"
-                            >common.js</a
-                          >
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </li>
+
               <li>
                 <div class="img_area">
                   <img src="images/img_portfolio2.png" alt="" />
                 </div>
                 <div class="portfolio_cont">
                   <h3>
-                    <span class="num_portfolio">04</span>
+                    <span class="num_portfolio">05</span>
                     Traveler Jane Blog page
                   </h3>
                   <p class="summary">
-                    포트폴리오용으로 제작한 데스크탑 페이지입니다.
+                    This is a Travel blog created for portfolio.
                   </p>
                   <ul class="point">
                     <li>
                       <span>바닐라 자바스크립트</span>
-                    </li>
-                    <li>
-                      <span>슬라이드 자체제작 (jQuery 이용하지 않았음)</span>
                     </li>
                     <li>
                       <span
@@ -324,66 +412,12 @@
                   </table>
                 </div>
               </li>
-              <li>
-                <div class="img_area">
-                  <a
-                    href="https://sign-up-page-bice.vercel.app/"
-                    target="_blank"
-                  >
-                    <img src="images/img_portfolio1.png" alt=""
-                  /></a>
-                </div>
-                <div class="portfolio_cont">
-                  <h3>
-                    <span class="num_portfolio">05</span>
-                    Sign up Form
-                  </h3>
-                  <p class="summary">Sign up Form</p>
-                  <ul class="point">
-                    <li>
-                      <span>Next.js</span>
-                    </li>
-                    <li>
-                      <span>Sign up Form (with Next.js)</span>
-                    </li>
-                  </ul>
-                  <div class="btn_area">
-                    <a
-                      href="https://github.com/janehyun03/sign-up-page"
-                      target="_blank"
-                      class="btn_goto"
-                      >GoTo</a
-                    >
-                  </div>
-                  <table class="file_link">
-                    <thead>
-                      <tr>
-                        <th id="col1">Category</th>
-                        <th id="col2">Source (click!)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td headers="col1">
-                          <span class="category html">Next.js</span>
-                        </td>
-                        <td headers="col2">
-                          <a
-                            href="https://github.com/janehyun03/sign-up-page"
-                            target="_blank"
-                            >Github Page</a
-                          >
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </li>
             </ol>
           </div>
         </div>
+
         <button type="button" class="btn_top">
-          <span class="hidden_text">최상단으로 가기</span>
+          <span class="hidden_text">Go to the top</span>
         </button>
       </main>
 
@@ -405,26 +439,6 @@
         </ul>
       </footer>
     </div>
-    <script>
-      const html = document.querySelector("html");
-      const btnTop = html.querySelector(".btn_top");
-
-      window.addEventListener("scroll", () => {
-        // 스크롤 노출설정
-        if (html.scrollTop > 1170) {
-          btnTop.style.visibility = "visible";
-        } else {
-          btnTop.style.visibility = "hidden";
-        }
-      });
-
-      btnTop.addEventListener("click", () => {
-        // 클릭시
-        window.scroll({
-          behavior: "smooth",
-          top: 0,
-        });
-      });
-    </script>
+    <script></script>
   </body>
 </html>

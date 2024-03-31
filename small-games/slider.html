@@ -12,9 +12,11 @@
       }
       .img-div {
         display: flex;
-        height: 300px;
-        width: 300px;
+        height: 400px;
+        width: 100%;
+        justify-content: center;
         border: 2px solid black;
+        background-color: bisque;
       }
       .desc {
         height: 20px;
@@ -42,27 +44,27 @@
     <script>
       let images = [
         {
-          picture: "./images/car.jpg",
+          picture: "images/img_portfolio2.png",
           description: "camping car",
           isLiked: false,
         },
         {
-          picture: "./images/deco.jpg",
+          picture: "./images/img_portfolio1.png",
           description: "decoration",
           isLiked: false,
         },
         {
-          picture: "./images/gift.jpg",
+          picture: "./images/img_portfolio3.png",
           description: "christmas gift",
           isLiked: true,
         },
         {
-          picture: "images/neom.jpg",
+          picture: "images/img_portfolio4.png",
           description: "neom",
           isLiked: false,
         },
         {
-          picture: "./images/wall.jpg",
+          picture: "./images/img_portfolio5.png",
           description: "wall",
           isLiked: false,
         },
@@ -76,7 +78,7 @@
           i +
           ' src="' +
           images[i].picture +
-          '" style="width:300px; height:300px"/></div>';
+          '" style="width:100%; height:100%"/></div>';
         arr.push(imageTag);
       }
 

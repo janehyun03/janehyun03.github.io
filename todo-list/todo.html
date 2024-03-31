@@ -28,8 +28,28 @@
         </div>
         <br />
 
-        <div class="work"></div>
-        <div class="show-list"></div>
+        <div class="work">
+          <div class="list">
+            <div>
+              <input type="checkbox">
+              <span class="todo-val">Study React</span>
+            </div>
+            <div>
+              <span class="time">*</span>
+              <span>-</span>
+            </div>
+        </div>
+        <div class="list">
+          <div>
+            <input type="checkbox">
+            <span class="todo-val">Go to the library</span>
+          </div>
+          <div>
+            <span class="time">*</span>
+            <span>-</span>
+          </div>
+      </div>
+        <!-- <div class="show-list"></div> -->
       </div>
     </div>
 
@@ -43,13 +63,14 @@
       let arrWork = [];
       // let todoVal = document.querySelector(".todo-val");
       let today = new Date();
-
       let getDay = today.getDate();
       let getMonth = today.getMonth() + 1;
       let getYear = today.getFullYear();
 
+      // 달을 숫자에서 영어로 바꾸기
+
       document.querySelector(".day").innerHTML = getDay;
-      document.querySelector(".month").innerHTML = getMonth;
+      document.querySelector(".month").innerHTML = getMonth + "月";
       document.querySelector(".year").innerHTML = getYear;
 
       submit.addEventListener("click", (e) => {
@@ -57,12 +78,11 @@
         <div class="list">
           <div><input type="checkbox"><span class="todo-val">${addText.value}</span></div>
           
-          <div><span class="time">중요여부</span><span>delete</span></div>
+          <div><span class="time">*</span><span>-</span></div>
       `;
         e.preventDefault();
 
         arrWork.push([addText.value, today]);
-
         addWork.insertAdjacentHTML("beforeend", addList);
       });
       // function change() {
