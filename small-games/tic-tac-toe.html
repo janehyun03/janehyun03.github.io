@@ -20,6 +20,7 @@
         line-height: 100px;
         font-size: 60px;
         border: 1px black solid;
+        background-color: transparent;
         text-align: center;
       }
       .restart-container {
@@ -71,15 +72,15 @@
       <div class="game-result">Result</div>
     </div>
     <div id="square-container">
-      <div class="squares square" value="0">1</div>
-      <div class="squares square" value="1">2</div>
-      <div class="squares square" value="2">3</div>
-      <div class="squares square" value="3">4</div>
-      <div class="squares square" value="4">5</div>
-      <div class="squares square" value="5">6</div>
-      <div class="squares square" value="6">7</div>
-      <div class="squares square" value="7">8</div>
-      <div class="squares square" value="8">9</div>
+      <button class="squares square" value="0"></button>
+      <button class="squares square" value="1"></button>
+      <button class="squares square" value="2"></button>
+      <button class="squares square" value="3"></button>
+      <button class="squares square" value="4"></button>
+      <button class="squares square" value="5"></button>
+      <button class="squares square" value="6"></button>
+      <button class="squares square" value="7"></button>
+      <button class="squares square" value="8"></button>
     </div>
 
     <div class="restart-container">
@@ -96,7 +97,7 @@
       gameRestart.addEventListener("click", (e) => {
         gameSatate = [[], [], []];
         squares.forEach((e, i) => {
-          e.textContent = i + 1;
+          e.textContent = "";
           e.disabled = false;
           e.style.backgroundColor = "";
           gameResult.innerHTML = "Result";
@@ -112,6 +113,7 @@
             currentPlayer = "O";
             squares[i].setAttribute("disabled", "true");
             calculateWinner(gameSatate);
+            console.log(squares[i]);
             console.log(gameSatate);
           } else if (currentPlayer == "O") {
             gameSatate[e.value] = currentPlayer;
