@@ -5,91 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe</title>
     <style type="text/css">
-            * {
-              box-sizing: border-box;
-            }
-            #square-container {
-              display: grid;
-              grid-template-columns: repeat(3, auto);
-              width: 306px;
-              margin: 50px auto;
-            }
-            .square {
-              width: 100px;
-              height: 100px;
-              line-height: 100px;
-              font-size: 60px;
-            }
-            .restart-container {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-            .result-container {
-              display: flex;
-              justify-content: center;
-              border: 2px solid gray;
-              width: 306px;
-              margin: 50px auto;
-            }
-            .game-result {
-              padding: 10px;
-            }
-
-
+      * {
+        box-sizing: border-box;
+      }
+      #square-container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        width: 306px;
+        margin: 50px auto;
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 60px;
+        border: 1px black solid;
+        text-align: center;
+      }
+      .restart-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .result-container {
+        display: flex;
+        justify-content: center;
+        border: 2px solid gray;
+        width: 306px;
+        margin: 50px auto;
+      }
+      .game-result {
+        padding: 10px;
+      }
 
       /* 814 이하 */
       @media screen and (max-width: 814px) {
         #square-container {
-              display: grid;
-              grid-template-columns: repeat(3, auto);
-              width: 150px;
-              margin: 50px auto;
-            }
-            .square {
-              width: 50px;
-              height: 50px;
-              line-height: 50px;
-              font-size: 30px;
-            }
+          display: grid;
+          grid-template-columns: repeat(3, auto);
+          width: 150px;
+          margin: 50px auto;
+        }
+        .square {
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 30px;
+        }
 
-            .result-container {
-              display: flex;
-              justify-content: center;
-              border: 2px solid gray;
-              width: 306px;
-              margin: 50px auto;
-            }
-            .game-result {
-              padding: 10px;
-            }
-
-      /* 414 이하 */
-      @media screen and (max-width: 414px) {
-        #square-container {
-              display: grid;
-              grid-template-columns: repeat(3, auto);
-              width: 100px;
-              margin: 50px auto;
-            }
-            .square {
-              width: 30px;
-              height: 30px;
-              line-height: 30px;
-              font-size: 20px;
-            }
-
-            .result-container {
-              display: flex;
-              justify-content: center;
-              border: 2px solid gray;
-              width: 306px;
-              margin: 50px auto;
-            }
-            .game-result {
-              padding: 10px;
-            }
-
+        .result-container {
+          display: flex;
+          justify-content: center;
+          border: 2px solid gray;
+          width: 150px;
+          margin: 50px auto;
+        }
+        .game-result {
+          padding: 10px;
+        }
       }
     </style>
   </head>
@@ -98,15 +71,15 @@
       <div class="game-result">Result</div>
     </div>
     <div id="square-container">
-      <button class="squares square" value="0">1</button>
-      <button class="squares square" value="1">2</button>
-      <button class="squares square" value="2">3</button>
-      <button class="squares square" value="3">4</button>
-      <button class="squares square" value="4">5</button>
-      <button class="squares square" value="5">6</button>
-      <button class="squares square" value="6">7</button>
-      <button class="squares square" value="7">8</button>
-      <button class="squares square" value="8">9</button>
+      <div class="squares square" value="0"></div>
+      <div class="squares square" value="1"></div>
+      <div class="squares square" value="2"></div>
+      <div class="squares square" value="3"></div>
+      <div class="squares square" value="4"></div>
+      <div class="squares square" value="5"></div>
+      <div class="squares square" value="6"></div>
+      <div class="squares square" value="7"></div>
+      <div class="squares square" value="8"></div>
     </div>
 
     <div class="restart-container">
