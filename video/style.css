@@ -9,6 +9,9 @@ body {
   background-color: black;
   color: white;
 }
+.desc-02 p {
+  padding: 0 15px;
+}
 
 .overlay {
   width: 100vw;
@@ -275,12 +278,12 @@ main {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -20%);
   width: 900px;
   max-width: 1000px;
-  min-width: 500px;
+  min-width: 250px;
   background-color: black;
   z-index: 101;
   display: flex;
@@ -514,7 +517,7 @@ footer {
   color: gray;
   font-size: x-small;
 }
-
+/* 
 @media screen and (max-width: 1200px) {
   .movie-title {
     top: 25%;
@@ -553,7 +556,7 @@ footer {
     width: 20%;
     font-size: x-small;
   }
-}
+} */
 @media screen and (max-width: 720px) {
   .who {
     font-size: 30px;
@@ -598,11 +601,143 @@ footer {
   .movieList {
     margin-top: 230px;
   }
+
+  .modal {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 20px;
+  }
+
+  .video-wrapper video {
+    width: 250px;
+  }
+
+  .video-resume {
+    padding: 0px;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    display: flex;
+  }
+
+  .modal-mov-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .desc-01,
+  .desc-02 {
+    padding: 5px;
+  }
+
+  .modal-item {
+    width: calc(100% / 1);
+    padding: 10px;
+  }
+
   .service-code {
-    width: 40%;
+    width: 20%;
     font-size: x-small;
   }
 }
+
+/* .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 900px;
+  max-width: 1000px;
+  min-width: 500px;
+  background-color: black;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.modal-button {
+  z-index: 3;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  align-items: center;
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  font-size: large;
+}
+
+.video-wrapper video {
+  border-radius: 5px 5px 0 0;
+  width: 900px;
+  object-fit: contain;
+} */
+/* 
+.video-resume {
+  padding: 50px;
+  position: absolute;
+  top: 350px;
+  left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resumeButton {
+  float: left;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  border-radius: 3px;
+  margin: 10px 10px 0px 0;
+  padding: 0;
+  border: 0;
+  width: 160px;
+}
+
+.plus-button img {
+  margin: 10px 10px 0px 0;
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+  justify-content: center;
+}
+
+.modal-mov-desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.desc-01,
+.desc-02 {
+  padding: 25px;
+}
+.desc-02 p {
+  color: rgb(82, 79, 79);
+}
+
+.modal-others-container {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: black;
+} */
 
 /* practicing css effect */
 /* .loader {
