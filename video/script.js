@@ -140,8 +140,8 @@ $(document).ready(function () {
     speed: 1000,
     slidesToShow: 6,
     slidesToScroll: 6,
-    nextArrow: '<button class="next">></button>',
-    prevArrow: '<button class="prev"><</button>',
+    nextArrow: '<div class="btn-con"><button class="next">&gt;</button></div>',
+    prevArrow: '<button class="prev">&lt;</button>',
     responsive: [
       {
         breakpoint: 1024,

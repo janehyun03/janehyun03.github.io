@@ -8,18 +8,19 @@
 body {
   background-color: black;
   color: white;
+  /* position: relative; */
 }
 .desc-02 p {
   padding: 0 15px;
 }
 
 .overlay {
-  width: 100vw;
-  height: 100vh;
-  min-width: 100vw;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
   background-color: black;
   opacity: 0.5;
-  min-height: 100vh;
+  min-height: 100%;
   z-index: 100;
   position: fixed;
 }
@@ -75,11 +76,14 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   color: white;
   padding-left: 2%;
   font-weight: 400;
 }
+
+/* navigation */
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -123,12 +127,14 @@ nav {
   margin: 10px;
 }
 
+#profile {
+  position: relative;
+}
 #profile-drop {
   position: absolute;
   font-size: 200;
   list-style: none;
   display: none;
-  position: absolute;
   margin-top: 50px;
   right: 40px;
   width: 230px;
@@ -142,7 +148,7 @@ nav {
 }
 
 #profile-drop li:first-child {
-  opacity: 0.6;
+  opacity: 0.75;
   border-top: 0px;
 }
 
@@ -164,6 +170,12 @@ nav {
 .profile-text-name {
   margin: 5px;
 }
+#profile-drop li a:link {
+  text-decoration: none;
+}
+#profile-drop li a:visited {
+  color: #fff;
+}
 
 .profile-text {
   padding-left: 15px;
@@ -178,10 +190,10 @@ nav {
   margin: 0 5px;
 }
 
-main {
-}
+/* main */
 
-.vignette {
+.main-items {
+  padding-bottom: 0%;
 }
 
 .movie {
@@ -276,9 +288,11 @@ main {
   position: relative;
 }
 
+/* modal */
+
 .modal {
   position: absolute;
-  top: 30%;
+  top: 400px;
   left: 50%;
   transform: translate(-50%, -20%);
   width: 900px;
@@ -292,7 +306,7 @@ main {
 }
 
 .modal-button {
-  z-index: 3;
+  z-index: 101;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -426,7 +440,7 @@ main {
 }
 
 .img_wrap {
-  height: 130px;
+  /* height: 130px; */
   padding: 3px;
   margin: 0;
 }
@@ -440,13 +454,16 @@ main {
 
 .main_items {
   padding-bottom: 5%;
+  margin: 10px 40px 0px 0px;
 }
-
+.category-text {
+  margin-top: 10px;
+}
 .main_items button {
   position: absolute;
   top: 0px;
-  height: 130px;
-  padding: 20px;
+  height: 100%;
+  /* padding: 20px; */
   /* top: calc(50% - 36px); */
 
   border: 0;
@@ -461,17 +478,26 @@ main {
 }
 
 /* button for slider */
-
+.slick-slider {
+  padding: 0;
+}
 .prev {
-  opacity: 0.5;
+  opacity: 1;
   left: 0px;
-  z-index: 2;
+  z-index: 1;
+  border-radius: 3px 0 0 3px;
+  padding: 10px;
 }
-
 .next {
-  opacity: 0.5;
+  opacity: 0.9;
   right: 0px;
+  border-radius: 0 3px 3px 0;
+  padding: 10px;
+  z-index: 1;
 }
+/* .slick-track {
+  margin-bottom: 20px;
+} */
 
 footer {
   bottom: 0;
@@ -641,103 +667,20 @@ footer {
     width: 20%;
     font-size: x-small;
   }
-}
+  /*  */
+  footer {
+    bottom: 0;
+    width: 100%;
+    padding: 0 100px;
+  }
+  .sitemap {
+    flex-direction: column;
+  }
 
-/* .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  width: 900px;
-  max-width: 1000px;
-  min-width: 500px;
-  background-color: black;
-  z-index: 101;
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
+  .service-code-container {
+    text-align: center;
+  }
 }
-
-.modal-button {
-  z-index: 3;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  align-items: center;
-  background-color: black;
-  color: white;
-  opacity: 0.7;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  padding: 5px;
-  font-size: large;
-}
-
-.video-wrapper video {
-  border-radius: 5px 5px 0 0;
-  width: 900px;
-  object-fit: contain;
-} */
-/* 
-.video-resume {
-  padding: 50px;
-  position: absolute;
-  top: 350px;
-  left: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.resume {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.resumeButton {
-  float: left;
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  border-radius: 3px;
-  margin: 10px 10px 0px 0;
-  padding: 0;
-  border: 0;
-  width: 160px;
-}
-
-.plus-button img {
-  margin: 10px 10px 0px 0;
-  width: 40px;
-  height: 40px;
-  opacity: 0.7;
-  justify-content: center;
-}
-
-.modal-mov-desc {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.desc-01,
-.desc-02 {
-  padding: 25px;
-}
-.desc-02 p {
-  color: rgb(82, 79, 79);
-}
-
-.modal-others-container {
-  padding: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  color: black;
-} */
 
 /* practicing css effect */
 /* .loader {
