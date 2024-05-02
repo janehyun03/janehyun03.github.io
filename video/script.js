@@ -1,14 +1,12 @@
-("use strict");
-
 const image = [
-  [
-    "https://occ-0-293-999.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXac4B6lYp_TuXGWiKjl7bdi61gNgKJZCHhReQWPUpDBDcicvBWdZfikRoNuzO8GuKfMkA26zB7N8OiRFD-Vw5TxwoVf-b1CuWQ.webp?r=cc9",
-    "spongebob",
-    "BRANDING",
-  ],
   [
     "https://occ-0-293-999.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcKQCXwNL4Z6bES6BIDHO6f71mDRzPi1KDAhGf0a8VY-0nEL1uneXJV4FNRDyHNT7wYB4bBgnZswnhsBs6DXv5T1HEBxoIobCgw.webp?r=037",
     "Gilmore Girls",
+    "BRANDING",
+  ],
+  [
+    "https://occ-0-293-999.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXac4B6lYp_TuXGWiKjl7bdi61gNgKJZCHhReQWPUpDBDcicvBWdZfikRoNuzO8GuKfMkA26zB7N8OiRFD-Vw5TxwoVf-b1CuWQ.webp?r=cc9",
+    "spongebob",
     "BRANDING",
   ],
   [
@@ -27,15 +25,16 @@ const image = [
     "BRANDING",
   ],
   [
-    "https://occ-0-293-999.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXH0Mj6kfV94GEA080TM0j0ULZBgqr5wt9pVtPxdbboajkkcqdJPCHO0Nm6V7VYm_9mouxyMhdRhK-8AHBMDkjSWqxJ9yvASbyjRBcjJMomHqYLpGCgLjnZx1dxC5bWqN6iuvIj79zUctpkpULYYyNwm8Xbh3ubMS8spQoURniBM5jMrxUxiYQrQ4YTfsK68akIR1ogfx8QNuBHdR610UNFIpBb7xv2OdSmZQsR3jYhYhu63nYqBmxDRL9XcknDwmbNGcnrRrAV381ZUfihP90zTIQ.webp?r=54d",
-    "Bad Moms",
-    "BRANDING",
-  ],
-  [
     "https://occ-0-293-999.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABfj-MZdGCLIOkB1OrtyaJLzx8N5xk2GjPL_aRfminOyHVNRhj4J56DznpVW0b-ouVzmMQzFYn8E-DtepEDbfe8JVYSveiY4RdnA.webp?r=a8a",
     "Brooklyn",
     "BRANDING",
   ],
+  [
+    "https://occ-0-293-999.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXH0Mj6kfV94GEA080TM0j0ULZBgqr5wt9pVtPxdbboajkkcqdJPCHO0Nm6V7VYm_9mouxyMhdRhK-8AHBMDkjSWqxJ9yvASbyjRBcjJMomHqYLpGCgLjnZx1dxC5bWqN6iuvIj79zUctpkpULYYyNwm8Xbh3ubMS8spQoURniBM5jMrxUxiYQrQ4YTfsK68akIR1ogfx8QNuBHdR610UNFIpBb7xv2OdSmZQsR3jYhYhu63nYqBmxDRL9XcknDwmbNGcnrRrAV381ZUfihP90zTIQ.webp?r=54d",
+    "Bad Moms",
+    "BRANDING",
+  ],
+
   [
     "https://occ-0-293-999.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZl15VIZVw1OQ2DRiDNYoFYhGUIBnRetrWa6bZkA_wiV0keRCyntY1dgzzx4G21cDoQZ7-oJY38ZY-icQPBho-Mb8qvkO0o2JLEVrqMn0exY9tnduedDHbK8QOdRAlfGbU8K.jpg?r=44e",
     "inventing anna",
@@ -120,7 +119,7 @@ window.onscroll = function () {
 // movie slider
 let arr = [];
 const inner = "";
-const list = document.querySelectorAll(".main_items");
+const list = document.querySelectorAll(".main-items");
 
 for (let i = 0; i < image.length; i++) {
   const imageTag =
@@ -135,12 +134,12 @@ for (let j = 0; j < list.length; j++) {
 }
 
 $(document).ready(function () {
-  $(".main_items").slick({
+  $(".main-items").slick({
     infinite: true,
     speed: 1000,
     slidesToShow: 6,
     slidesToScroll: 6,
-    nextArrow: '<div class="btn-con"><button class="next">&gt;</button></div>',
+    nextArrow: '<button class="next">&gt;</button>',
     prevArrow: '<button class="prev">&lt;</button>',
     responsive: [
       {
