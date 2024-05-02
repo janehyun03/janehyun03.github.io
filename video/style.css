@@ -384,17 +384,17 @@ nav {
 
 .modal-item {
   width: calc(100% / 3);
-  padding: 15px;
+  margin-bottom: 10px;
 }
 
 .pic-container {
-  height: 150px;
+  height: 100%;
 }
 .pic {
-  border-radius: 10px;
   width: 100%;
   height: 150px;
   object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
 .pic-description {
@@ -404,6 +404,7 @@ nav {
   background-color: rgb(82, 79, 79);
   width: 100%;
   height: 200px;
+  border-radius: 0 0 10px 10px;
 }
 
 .pic-description-first {
@@ -625,20 +626,20 @@ footer {
   }
 
   .modal {
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    width: 20px;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    width: 100%;
   }
 
   .video-wrapper video {
-    width: 250px;
+    width: 100%;
   }
 
   .video-resume {
     padding: 0px;
     position: absolute;
-    top: 60px;
+    top: 5%;
     left: 10px;
     display: flex;
   }
@@ -656,7 +657,8 @@ footer {
 
   .modal-item {
     width: calc(100% / 1);
-    padding: 10px;
+
+    /* padding: 10px; */
   }
 
   .service-code {
