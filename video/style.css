@@ -570,7 +570,15 @@ footer {
   #profile-drop {
     margin-top: 40px;
   }
-
+  .movieList {
+    margin-top: 15%;
+  }
+  .movie-desc {
+    visibility: hidden;
+    height: 0;
+  }
+  .movie-title {
+  }
   .movie-title p {
     font-size: 38px;
   }
