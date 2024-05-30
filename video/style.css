@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -571,16 +572,36 @@ footer {
     margin-top: 40px;
   }
   .movieList {
-    margin-top: 15%;
+    /* margin-top: 15%; */
+  }
+  .slider {
+    /* position: absolute; */
+    top: 100px;
+    left: 0;
+    right: 0;
+    padding-top: 3.5%;
+    padding-left: 3.5%;
   }
   .movie-desc {
-    visibility: hidden;
-    height: 0;
+    /* visibility: hidden; */
+    /* height: 0; */
   }
   .movie-title {
   }
   .movie-title p {
     font-size: 38px;
+  }
+  .btn-con {
+    display: flex;
+  }
+
+  .playButton,
+  .infoButton {
+    flex-direction: row;
+  }
+
+  .playButton {
+    width: 120px;
   }
 
   .modal {
