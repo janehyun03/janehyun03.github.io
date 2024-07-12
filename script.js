@@ -34,14 +34,14 @@ $(document).ready(function () {
   });
 
   $(".about").slick({
-    // infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
     speed: 1000,
     slidesToShow:1,
     slidesToScroll: 1,
     arrows:false,
-    dots: true,
+    // dots: true,
   });
 });
 
