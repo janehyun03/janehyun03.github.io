@@ -180,20 +180,23 @@ body {
    border-radius: 20px 0 0 20px;
 }
 .about-me-discription{
-  /* display: flex; */
+  
   font-size: large ;
   line-height: 2;
   padding: 4rem;
 }
 
-.about-me-discription p:last-child{
+.about-link p{
+  color: rgb(72, 72, 220);
+  font-weight: bold;
+}
+
+.blog-icon{
+  margin-left: 20px;
+}
+
+.about-link{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.blog-icon{}
-
-.about-me-job{
-
 }
