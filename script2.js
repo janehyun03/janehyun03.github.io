@@ -32,11 +32,7 @@ $(document).ready(function () {
       },
     ],
   });
-},
 
-);
-
-$(document).ready(function () {
   $(".about").slick({
     // infinite: true,
     // autoplay: true,
@@ -46,11 +42,11 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows:false,
     dots: true,
-  })}
-)
+  });
+});
 
 const typed = new Typed(".animate", {
-  strings: ["Jane.", "a lecturer", "a travaler.", "a developer."],
+  strings: ["Jane.", "a lecturer.", "a travaler.", "a developer."],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true,

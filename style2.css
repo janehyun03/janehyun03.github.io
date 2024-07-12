@@ -14,6 +14,7 @@ body {
   color: #555;
 }
 
+
 /*********************/
 /*  HEADER */
 /*********************/
@@ -80,6 +81,13 @@ body {
   padding: 4.8rem 0 1.6rem 0;
 }
 
+.animate{
+  color: rgb(234, 144, 34); 
+}
+.typed-cursor{
+  color: rgb(234, 144, 34); 
+}
+
 .hero {
   max-width: 130rem;
   margin: 0 auto;
@@ -113,7 +121,6 @@ body {
 /*************************/
 .section-skills{
   /* background-color: #040303; */
-
 }
 
 .skills-images{
