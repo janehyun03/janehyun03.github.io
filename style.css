@@ -207,3 +207,30 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+
+
+/* footer */
+footer {
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+footer h2 {
+  padding: 30px 0;
+  font-size: 33px;
+  letter-spacing: -1px;
+}
+footer h2::after {
+  display: none;
+}
+.contact_list > li i {
+  margin-right: 7px;
+}
+.contact_list > li + li {
+  margin-top: 15px;
+}
