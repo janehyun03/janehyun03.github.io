@@ -84,6 +84,7 @@
   justify-content: center;
   align-items: center;
  }
+
   .hero{
     grid-template-columns: 1fr;
     padding: 0 8rem;
@@ -311,6 +312,11 @@
   .cta-img-box {
     height: 32rem;
     grid-row: 1;
+  }
+
+  .hero-text-box h1,
+  .animate{
+    font-size: 3.5rem;
   }
 }
 
