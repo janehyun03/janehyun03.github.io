@@ -147,6 +147,12 @@ body {
   gap:10px;
 }
 
+.social-media-icon{
+  height: 5rem;
+  width: 5rem;
+  color: #2c2c89;
+}
+
 
 /*************************/
 /*  SKILLS SECTION */
