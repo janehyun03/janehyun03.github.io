@@ -318,6 +318,13 @@
   .animate{
     font-size: 3.5rem;
   }
+
+  .about-me-discription{
+    font-size: small;
+    line-height: 1.5;
+    padding: 3rem ;
+  }
+
 }
 
 /* 

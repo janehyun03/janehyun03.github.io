@@ -92,8 +92,17 @@ const allLinks = document.querySelectorAll("a");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     const href = link.getAttribute("href");
+
+    // Skip smooth scrolling for external links
+    if (href.startsWith("http://") || href.startsWith("https://") || href.startsWith("./")) {
+      return;
+    }
+
+    // Prevent default behavior for internal links
+    e.preventDefault();
+
 
     // Scroll back to top
     if (href === "#")
@@ -109,8 +118,8 @@ allLinks.forEach(function (link) {
     }
 
     // Close mobile naviagtion
-    // if (link.classList.contains("main-nav-link"))
-    //   headerEl.classList.toggle("nav-open");
+    if (link.classList.contains("main-nav-link"))
+      headerEl.classList.toggle("nav-open");
   });
 });
 
